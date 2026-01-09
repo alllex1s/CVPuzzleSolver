@@ -38,9 +38,6 @@ static int count_white(const image8u& img) {
 TEST(morphology, SquareErodeDilate_R2) {
     configureWorkingDirectory();
 
-    const fs::path dir = "debug-unit-tests/morphology/case00_square";
-    fs::create_directories(dir);
-
     image8u in = make_black(32, 32);
     draw_filled_rect(in, 8, 8, 23, 23, 255);
 
@@ -64,9 +61,6 @@ TEST(morphology, SquareErodeDilate_R2) {
 TEST(morphology, SinglePixel_ErodeAndDilate) {
     configureWorkingDirectory();
 
-    const fs::path dir = "debug-unit-tests/morphology/case01_single_pixel";
-    fs::create_directories(dir);
-
     image8u in = make_black(25, 25);
     in(12, 12) = 255;
 
@@ -89,9 +83,6 @@ TEST(morphology, SinglePixel_ErodeAndDilate) {
 
 TEST(morphology, StrengthZero_IsCopy) {
     configureWorkingDirectory();
-
-    const fs::path dir = "debug-unit-tests/morphology/case02_strength0";
-    fs::create_directories(dir);
 
     image8u in = make_black(16, 16);
     draw_filled_rect(in, 3, 5, 10, 12, 255);
