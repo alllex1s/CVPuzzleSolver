@@ -1,6 +1,7 @@
 add_library(libbase STATIC
         libbase/configure_working_directory.cpp
         libbase/fast_random.cpp
+        libbase/point2.cpp
         libbase/stats.cpp
         libbase/timer.cpp
 )
@@ -11,6 +12,7 @@ if (BUILD_TESTING)
     add_executable(libbase_tests
             libbase/configure_working_directory_tests.cpp
             libbase/fast_random_tests.cpp
+            libbase/point2_tests.cpp
             libbase/stats_tests.cpp
             libbase/timer_tests.cpp
     )
